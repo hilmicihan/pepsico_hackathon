@@ -84,6 +84,8 @@ dependencies:
   flutter_fortune_wheel: ^1.2.0
   step_progress_indicator: ^1.0.2
   flutter_rating_bar: ^4.0.0
+  salomon_bottom_bar: ^3.2.0
+  persistent_bottom_nav_bar: ^4.0.2
 
 dev_dependencies:
   flutter_test:

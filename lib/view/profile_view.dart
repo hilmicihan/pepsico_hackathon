@@ -8,12 +8,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey,
-        title: Text(
-          'My Profile ',
-        ),
-      ),
+      
       body: SingleChildScrollView(
         child: Column(
           children: [

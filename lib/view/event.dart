@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:pepsico_hackathon/view/spinning_wheel.dart';
 import 'item_reviews_page.dart';
 
-class Events extends StatefulWidget
+class EventsFeed extends StatefulWidget
 {
   @override
-  _EventsState createState() => _EventsState();
+  _EventsFeedState createState() => _EventsFeedState();
 }
 
-class _EventsState extends State<Events>
+class _EventsFeedState extends State<EventsFeed>
 {
   @override
   Widget build(BuildContext context)
@@ -19,12 +19,7 @@ class _EventsState extends State<Events>
       (
         elevation: 0.0,
         backgroundColor: Colors.transparent,
-        leading: IconButton
-        (
-          color: Colors.black,
-          onPressed: () => Navigator.of(context).pop(),
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-        ),
+       
         title: Text('Etkinlikler', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700)),
         
       ),
@@ -80,7 +75,7 @@ class ShopItem extends StatelessWidget
                       color: Colors.white,
                       child: InkWell
                       (
-                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ItemReviewsPage())),
+                        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => SpinningWeel())),
                         child: Padding
                         (
                           padding: EdgeInsets.all(24.0),
