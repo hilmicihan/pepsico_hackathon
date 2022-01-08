@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 import 'components/card.dart';
 import 'config/colors.dart';
 import 'config/size.dart';
-
 
 class CardWidget extends StatefulWidget {
   @override
@@ -25,7 +25,7 @@ class _CardWidgetState extends State<CardWidget> {
             margin: EdgeInsets.symmetric(horizontal: width / 20),
             alignment: Alignment.centerLeft,
             child: Text(
-              "Card Selected",
+              "",
               style: TextStyle(
                   fontWeight: FontWeight.bold, fontSize: fontSize(20)),
             )),
@@ -45,18 +45,76 @@ class _CardWidgetState extends State<CardWidget> {
                         horizontal: width / 25, vertical: height / 30),
                     child: Stack(
                       children: <Widget>[
-                         Positioned.fill(
+                        Positioned(
+                          top: 50,
+                          left: 50,
+                          child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: 80,
+                                    height: 70,
+                                    child: CircularStepProgressIndicator(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text("haftalık ilerleme"),
+                                      ),
+                                      selectedColor: Colors.red,
+                                      totalSteps: 7,
+                                      currentStep: 3,
+                                      width: 150,
+                                      roundedCap: (_, isSelected) => isSelected,
+                                    ),
+                                  ),
+                                  SizedBox(width: 20,),
+                                  Container(
+                                    width: 80,
+                                    height: 70,
+                                    child: CircularStepProgressIndicator(
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(horizontal: 9.0,vertical: 8),
+                                        child: Text("Aylık ilerleme"),
+                                      ),
+                                      selectedColor: Colors.red,
+                                      totalSteps: 7,
+                                      currentStep: 3,
+                                      width: 150,
+                                      roundedCap: (_, isSelected) => isSelected,
+                                    ),
+                                  ),
+                                  SizedBox(width: 20,),
+                                  Container(
+                                    width: 80,
+                                    height: 70,
+                                    child: CircularStepProgressIndicator(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text("Yıllık ilerleme"),
+                                      ),
+                                      selectedColor: Colors.red,
+                                      totalSteps: 7,
+                                      currentStep: 3,
+                                      width: 150,
+                                      roundedCap: (_, isSelected) => isSelected,
+                                    ),
+                                  ),
+                                
+                                ],
+                              ),
+                        ),
+                        Positioned.fill(
                           top: 150,
                           bottom: -200,
                           left: 0,
                           child: Container(
+                             
                             decoration: BoxDecoration(boxShadow: [
                               BoxShadow(
                                   color: Colors.blue[900]!.withOpacity(0.2),
                                   blurRadius: 50,
                                   spreadRadius: 2,
                                   offset: Offset(20, 0)),
-                                   BoxShadow(
+                              BoxShadow(
                                   color: Colors.white12,
                                   blurRadius: 0,
                                   spreadRadius: -2,
@@ -75,16 +133,15 @@ class _CardWidgetState extends State<CardWidget> {
                                   blurRadius: 50,
                                   spreadRadius: 2,
                                   offset: Offset(20, 0)),
-                                   BoxShadow(
+                              BoxShadow(
                                   color: Colors.white12,
                                   blurRadius: 0,
                                   spreadRadius: -2,
                                   offset: Offset(0, 0)),
                             ], shape: BoxShape.circle, color: Colors.white30),
                           ),
-                        ), 
-                       
-                        BankCard(),
+                        ),
+              
                       ],
                     ),
                   );

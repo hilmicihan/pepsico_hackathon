@@ -60,9 +60,6 @@ dependencies:
 
   # Video player
   video_player: ^2.1.12
-  chewie: 
-    git:
-      url: git@github.com:v1nnk1/chewie.git
 
 
   # Countdown timer
@@ -86,7 +83,8 @@ dependencies:
   flutter_rating_bar: ^4.0.0
   salomon_bottom_bar: ^3.2.0
   persistent_bottom_nav_bar: ^4.0.2
-
+  get: ^4.6.1
+  searchfield: ^0.5.6
 dev_dependencies:
   flutter_test:
     sdk: flutter

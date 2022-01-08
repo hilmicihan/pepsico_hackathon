@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pepsico_hackathon/main.dart';
 
 class LoginView extends StatefulWidget {
   LoginView({Key? key}) : super(key: key);
@@ -70,7 +71,7 @@ class _LoginViewState extends State<LoginView> {
                 child: tabs(),
               ),
             ),
-            _emailFiled(),
+            _emailFiled(context),
           ],
         ),
       ),
@@ -86,7 +87,7 @@ Widget tabs() {
         Tab(
           child: Text(
             "Sign in",
-            style: GoogleFonts.montserrat(fontSize: 20),
+            style: GoogleFonts.montserrat(fontSize: 20,color: Colors.white),
           ),
         ),
         Tab(
@@ -94,6 +95,7 @@ Widget tabs() {
             "Sign up",
             style: GoogleFonts.montserrat(
               fontSize: 20,
+              color: Colors.white
             ),
           ),
         ),
@@ -104,7 +106,7 @@ Widget tabs() {
   );
 }
 
-Widget _emailFiled() {
+Widget _emailFiled(BuildContext context) {
   return Container(
     margin: EdgeInsets.all(40),
     padding: EdgeInsets.only(top: 235, left: 5, right: 5),
@@ -115,7 +117,7 @@ Widget _emailFiled() {
           decoration: InputDecoration(
             fillColor: Colors.white,
             hoverColor: Colors.red,
-            prefixIconColor:Colors.white ,
+            prefixIconColor: Colors.white,
             focusColor: Colors.white,
             hintText: "Phone Number",
             hintStyle: GoogleFonts.montserrat(
@@ -125,6 +127,7 @@ Widget _emailFiled() {
             ),
             prefixIcon: Icon(
               Icons.phone,
+              color: Colors.blueAccent,
             ),
           ),
           keyboardType: TextInputType.phone,
@@ -137,7 +140,13 @@ Widget _emailFiled() {
               // ignore: deprecated_member_use
               FlatButton(
                   padding: EdgeInsets.symmetric(vertical: 18, horizontal: 20),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MyApp(UniqueKey())),
+                    );
+                  },
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                   child: Text(
@@ -201,7 +210,13 @@ Widget _emailFiled() {
                 height: 50,
                 // ignore: deprecated_member_use
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MyApp(UniqueKey())),
+                    );
+                  },
                   shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0),
                   ),
@@ -216,7 +231,13 @@ Widget _emailFiled() {
                 height: 50,
                 // ignore: deprecated_member_use
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MyApp(UniqueKey())),
+                    );
+                  },
                   shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0),
                   ),
@@ -231,7 +252,13 @@ Widget _emailFiled() {
                 height: 50,
                 // ignore: deprecated_member_use
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MyApp(UniqueKey())),
+                    );
+                  },
                   shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0),
                   ),
