@@ -2,9 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:pepsico_hackathon/screeens/onboarding/page/onboarding_page.dart';
+import 'package:pepsico_hackathon/view/leaderBoard.dart';
+import 'package:pepsico_hackathon/view/profile_view.dart';
+import 'package:pepsico_hackathon/view/event.dart';
 import 'package:timezone/data/latest.dart' as tz;
-
 import 'core/const/color_constants.dart';
 
 void main() async {
@@ -45,7 +46,7 @@ class _MyAppState extends State<MyApp> {
     //final isLoggedIn = FirebaseAuth.instance.currentUser != null;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Fitness',
+      title: 'Pepsico',
       theme: ThemeData(
         textTheme: const TextTheme(
             bodyText1: TextStyle(color: ColorConstants.textColor)),
@@ -53,7 +54,7 @@ class _MyAppState extends State<MyApp> {
         scaffoldBackgroundColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: OnboardingPage(),
+      home:LeaderBoard(),
     );
   }
 
